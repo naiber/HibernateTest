@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="HBPersistence">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>database_table.DepartmentsEntity</class>
+        <class>database_table.ItemsEntity</class>
+        <class>database_table.MovementsEntity</class>
+        <class>database_table.WarehousemenEntity</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/warehouse"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="500"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="2000"/>
+        </properties>
+        <!--<mapping-file>./database_mapping/DepartmentsEntity.xml</mapping-file>
+        <mapping-file>./database_mapping/ItemsEntity.xml</mapping-file>
+        <mapping-file>./database_mapping/MovementsEntity.xml</mapping-file>
+        <mapping-file>./database_mapping/WarehousemenEntity.xml</mapping-file>
+        <cldatabase_tablebles.DepartmentsEntity</class>
+        <cldatabase_tablebles.ItemsEntity</class>
+        <cldatabase_tablebles.MovementsEntity</class>
+        <cldatabase_tablebles.WarehousemenEntity</class>-->
+    </persistence-unit>
+</persistence>

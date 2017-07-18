@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="database_table.MovementsEntity" table="movements" schema="warehouse">
+        <id name="id" column="id"/>
+        <property name="size" column="size"/>
+        <property name="date" column="date"/>
+        <many-to-one name="items" class="database_table.ItemsEntity" access="field" fetch="join">
+            <column name="item"></column>
+        </many-to-one>
+        <many-to-one name="warehousemen" class="database_table.WarehousemenEntity" access="field" fetch="join">
+            <column name="waremen"></column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
